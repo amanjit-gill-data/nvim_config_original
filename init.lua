@@ -14,7 +14,7 @@ require("plugin.lualine")
 require("plugin.nvim-cmp")
 require("plugin.autopairs")
 
--- LSP
+-- LSP not configured yet
 -- require("plugin.lsp.mason")
 
 
