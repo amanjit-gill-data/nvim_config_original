@@ -12,12 +12,9 @@ end
 
 mason.setup()
 
--- ensure installation of lsps for:
--- python
--- R
 mason_lspconfig.setup({
   ensure_installed = {
-    "pyright",
-    "r_language_server"
-  }
+    "pylsp"
+  },
 })
+

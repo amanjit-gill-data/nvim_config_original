@@ -84,10 +84,25 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Nvim-R"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Nvim-R",
+    url = "https://github.com/jalvesaq/Nvim-R"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-r"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-r",
+    url = "https://github.com/jalvesaq/cmp-nvim-r"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -109,6 +124,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   nightfly = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfly",
@@ -123,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

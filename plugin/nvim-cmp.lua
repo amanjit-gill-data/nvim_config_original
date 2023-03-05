@@ -35,7 +35,8 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "luasnip" }, -- snippets
     { name = "buffer" }, -- text within current buffer
-    { name = "path" } -- file system paths
+    { name = "path" , option = { trailing_slash = true }}, -- file system paths
+    { name = "cmp_nvim_r"} -- R completion source
   })
 })
 
