@@ -14,7 +14,8 @@ mason.setup()
 
 mason_lspconfig.setup({
   ensure_installed = {
-    "pylsp"
+    "pylsp",
+    "r_language_server"
   },
 })
 

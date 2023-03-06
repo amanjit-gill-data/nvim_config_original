@@ -66,18 +66,13 @@ return require("packer").startup(function(use)
   -- snippet "sources"
   -- cmp_luasnip: allows cmp to access snippets as an autocompletion source
   -- friendly-snippets: snippets for many different languages
-  -- completions for R  
   use("saadparwaiz1/cmp_luasnip") 
   use("rafamadriz/friendly-snippets")
-  use("jalvesaq/cmp-nvim-r")
 
   -- autopair brackets 
   -- configured to work with autocompleted text too
   use("windwp/nvim-autopairs")
   
-  -- Nvim-R
-  use("jalvesaq/Nvim-R")
-
   -- LANGUAGE SERVER FEATURES --
   -- LSP is built into nvim but the servers themselves are not
   
