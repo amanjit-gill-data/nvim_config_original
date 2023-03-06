@@ -1,13 +1,22 @@
+-- to find lua config files
 local config_path = os.getenv("XDG_CONFIG_HOME") .. "\\nvim\\?.lua;"
-vim.cmd("let $R_DEFAULT_PACKAGES = 'utils, grDevices, graphics, stats, methods, nvimcom'")
+
+-- for optional python provider
+vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag\\python.exe'")
+vim.cmd("let g:python_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag\\python.exe'")
+
+-- to find rtools and r
 vim.cmd("let R_path = 'C:\\rtools42\\usr\\bin;C:\\Program Files\\R\\R-4.2.2\\bin\\x64'")
-vim.cmd("let $PATH = 'C:\\rtools42\\mingw64\\bin;C:\\rtools42\\usr\\bin;' . $PATH")
+
+-- to set shell
+-- it already knows that bash is my preferred shell, but :terminal passes a
+-- mangled command to it; so I'm resetting the shell here
+vim.cmd("set shell=bash")
 
 -- otherwise R immediately exits with error 127 (but editor still works)
 -- only valid value in Windows is 1
-vim.cmd("let R_external_term = 1")
-
-vim.cmd("let R_cmd = 'Rterm'")
+-- vim.cmd("let R_external_term = 1")
+vim.cmd("let R_cmd = 'R'")
 
 package.path = package.path .. config_path 
 
@@ -25,5 +34,5 @@ require("plugin.autopairs")
 
 -- LSP 
 require("plugin.lsp.mason")
-
+require("plugin.lsp.lspconfig")
 
