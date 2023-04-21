@@ -19,4 +19,5 @@ end
 -- link cmp to autopairs
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
-autopairs.setup()
+autopairs.setup({
+})

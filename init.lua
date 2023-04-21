@@ -8,8 +8,8 @@ package.path = package.path .. config_path
 vim.cmd("set shell=bash")
 
 -- for optional python provider
-vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag\\python.exe'")
-vim.cmd("let g:python_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag\\python.exe'")
+vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag23\\python.exe'")
+vim.cmd("let g:python_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag23\\python.exe'")
 
 require("setup_plugins")
 require("core.options")

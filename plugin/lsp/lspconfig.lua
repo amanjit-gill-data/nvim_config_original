@@ -47,15 +47,15 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
+-- pylsp config settings
+-- https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md
+
 lspconfig["pylsp"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     pylsp = {
       plugins = {
-        jedi = {
-          auto_import_modules = '["numpy", "pandas", "math"]'
-        }
       }
     }
   }
