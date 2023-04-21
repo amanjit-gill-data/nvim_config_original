@@ -47,18 +47,9 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- pylsp config settings
--- https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md
-
-lspconfig["pylsp"].setup({
+lspconfig["pyright"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  settings = {
-    pylsp = {
-      plugins = {
-      }
-    }
-  }
 })
 
 lspconfig["r_language_server"].setup({
