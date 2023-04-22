@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Nvim-R",
     url = "https://github.com/jalvesaq/Nvim-R"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -138,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightfly",
     url = "https://github.com/bluz71/vim-nightfly-colors"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
