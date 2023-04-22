@@ -28,7 +28,7 @@ opt.smartcase = true
 opt.cursorline = true
 
 -- cursor shape and blinking
-opt.guicursor = "i:blinkwait100-blinkoff500-blinkon500,i:ver20"
+opt.guicursor = "i:blinkwait100-blinkon500-blinkoff500,i:ver20"
 
 -- appearance
 

@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Nvim-R"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Nvim-R",
+    url = "https://github.com/jalvesaq/Nvim-R"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",

@@ -72,7 +72,10 @@ return require("packer").startup(function(use)
   -- autopair brackets 
   -- configured to work with autocompleted text too
   use("windwp/nvim-autopairs")
-  
+
+  -- nvim-r
+  use("jalvesaq/Nvim-R")
+
   -- LANGUAGE SERVER FEATURES --
   -- LSP is built into nvim but the servers themselves are not
   
@@ -87,7 +90,7 @@ return require("packer").startup(function(use)
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
-  
+
 end)
 
 

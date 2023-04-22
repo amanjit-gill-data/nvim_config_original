@@ -52,7 +52,7 @@ lspconfig["pyright"].setup({
   capabilities = capabilities,
 })
 
-lspconfig["r_language_server"].setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
+-- lspconfig["r_language_server"].setup({
+--  on_attach = on_attach,
+--  capabilities = capabilities,
+-- })
