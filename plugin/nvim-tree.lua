@@ -33,5 +33,9 @@ nvimtree.setup({
       },
     },
   },
+  -- disable git status icons because I don't like how they look
+  git = {
+    enable = false
+  }
 })
 

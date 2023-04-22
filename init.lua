@@ -5,10 +5,14 @@ package.path = package.path .. config_path
 -- settings for Nvim-R
 -- doesn't work unless I set window ID myself
 -- doesn't work with any shell other than cmd.exe
-vim.cmd("let $WINDOWID = 1000")
-vim.opt.shell = 'cmd.exe'
+vim.cmd("let $WINDOWID = win_getid()")
+vim.cmd("let &shell = 'cmd.exe'")
 vim.cmd("let R_path = 'C:\\Program Files\\R\\R-4.2.3\\bin\\x64'")
 vim.cmd("let $PATH = 'C:\\rtools42\\usr\\bin;' . $PATH")
+
+
+vim.cmd("let R_nvim_wd = 1")
+vim.cmd("let R_objbr_auto_start = 1")
 
 -- for optional python provider
 vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\ag23\\python.exe'")

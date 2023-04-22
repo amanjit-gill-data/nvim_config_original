@@ -44,7 +44,10 @@ return require("packer").startup(function(use)
 
   -- status line
   use("nvim-lualine/lualine.nvim")
- 
+
+  -- nvim-r
+  use("jalvesaq/Nvim-R")
+
   -- AUTOCOMPLETION -- 
 
   -- autocompletion engine
@@ -71,10 +74,7 @@ return require("packer").startup(function(use)
 
   -- autopair brackets 
   -- configured to work with autocompleted text too
-  use("windwp/nvim-autopairs")
-
-  -- nvim-r
-  use("jalvesaq/Nvim-R")
+  use("jiangmiao/auto-pairs")
 
   -- LANGUAGE SERVER FEATURES --
   -- LSP is built into nvim but the servers themselves are not

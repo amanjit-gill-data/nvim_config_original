@@ -36,7 +36,7 @@ cmp.setup({
     { name = "luasnip" }, -- snippets
     { name = "buffer" }, -- text within current buffer
     { name = "path" , option = { trailing_slash = true }}, -- file system paths
-    { name = "nvim_lsp" } -- autocompletions from language servers 
+    { name = "nvim_lsp" }, -- autocompletions from language servers
   })
 })
 
