@@ -16,10 +16,9 @@ if not cmp_setup then
   return
 end
 
+autopairs.setup()
+
 -- link cmp to autopairs
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
-autopairs.setup({
-  enable_check_bracket_line = true
-})
 

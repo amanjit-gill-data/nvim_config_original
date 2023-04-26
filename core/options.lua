@@ -15,23 +15,22 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrap
-
 opt.wrap = false
 
 -- search case
-
 opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line
-
 opt.cursorline = true
 
 -- cursor shape and blinking
 opt.guicursor = "i:blinkwait100-blinkon500-blinkoff500,i:ver20"
 
--- appearance
+-- 80-character indicator
+opt.colorcolumn = "80"
 
+-- appearance
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "no"
