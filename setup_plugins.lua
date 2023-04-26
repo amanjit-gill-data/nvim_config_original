@@ -55,11 +55,13 @@ return require("packer").startup(function(use)
   -- doesn't include any languages ("sources")
   use("hrsh7th/nvim-cmp")
 
-  -- basic autocompletion "sources"
+  -- autocompletion "sources"
   -- cmp-buffer: gets cmp to recommend from the buffer
   -- cmp-path: gets cmp to recommend filepaths
+  -- cmp-nvim-r: for R autocompletion 
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
+  use("jalvesaq/cmp-nvim-r")
 
   -- snippet engine
   -- provides capability for loading and creating snippets

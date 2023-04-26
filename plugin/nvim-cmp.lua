@@ -37,6 +37,7 @@ cmp.setup({
     { name = "buffer" }, -- text within current buffer
     { name = "path" , option = { trailing_slash = true }}, -- file system paths
     { name = "nvim_lsp" }, -- autocompletions from language servers
+    { name = "cmp_nvim_r"} -- autocompletion for R
   })
 })
 

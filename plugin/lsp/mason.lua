@@ -20,7 +20,6 @@ mason.setup()
 mason_lspconfig.setup({
   ensure_installed = {
     "pyright",
-    "r_language_server"
-  },
+  }
 })
 

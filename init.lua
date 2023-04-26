@@ -1,4 +1,5 @@
--- to find lua config files
+-- to find lua config files 
+-- otherwise it can only find them if nvim is started in config directory
 local config_path = os.getenv("XDG_CONFIG_HOME") .. "\\nvim\\?.lua;"
 package.path = package.path .. config_path 
 
@@ -36,4 +37,5 @@ require("plugin.autopairs")
 -- LSP 
 require("plugin.lsp.mason")
 require("plugin.lsp.lspconfig")
+
 
