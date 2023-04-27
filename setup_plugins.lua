@@ -45,7 +45,10 @@ return require("packer").startup(function(use)
   -- status line
   use("nvim-lualine/lualine.nvim")
 
-  -- nvim-r
+  -- git status in gutter
+  use("lewis6991/gitsigns.nvim")
+
+  -- R IDE implementation
   use("jalvesaq/Nvim-R")
 
   -- AUTOCOMPLETION -- 
