@@ -26,7 +26,7 @@ nvimtree.setup({
           unstaged = "•",
           untracked = "u",
           staged = "•",
-          ignored = "┅"
+          ignored = "ө"
         }
       },
     },
