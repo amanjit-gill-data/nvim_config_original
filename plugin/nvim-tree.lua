@@ -22,8 +22,18 @@ nvimtree.setup({
           arrow_closed = "→", -- when folder is closed
           arrow_open = "↓"    -- when folder is open
         },
+        git = {
+          unstaged = "•",
+          untracked = "u",
+          staged = "•",
+          ignored = "┅"
+        }
       },
     },
+  },
+  git = {
+    ignore = false,
+    show_on_open_dirs = false
   },
   -- apparently disabling the window picker makes nvim-tree work correctly with split windows etc
   actions = {
@@ -33,9 +43,5 @@ nvimtree.setup({
       },
     },
   },
-  -- disable git status icons because I don't like how they look
-  git = {
-    enable = false
-  }
 })
 

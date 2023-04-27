@@ -55,7 +55,7 @@ return require("packer").startup(function(use)
   -- doesn't include any languages ("sources")
   use("hrsh7th/nvim-cmp")
 
-  -- autocompletion "sources"
+  -- autocompletion sources
   -- cmp-buffer: gets cmp to recommend from the buffer
   -- cmp-path: gets cmp to recommend filepaths
   -- cmp-nvim-r: for R autocompletion 
@@ -65,7 +65,7 @@ return require("packer").startup(function(use)
 
   -- snippet engine
   -- provides capability for loading and creating snippets
-  -- doesn't include snippet "sources"
+  -- doesn't include snippet sources
   use("L3MON4D3/LuaSnip") 
 
   -- snippet "sources"

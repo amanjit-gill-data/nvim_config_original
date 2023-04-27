@@ -16,9 +16,24 @@ if not cmp_setup then
   return
 end
 
-autopairs.setup()
+autopairs.setup{}
 
 -- link cmp to autopairs
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done({
+    filetypes = {
+      py = {
+        ["("] = {
+          kind = {
+            cmp.lsp.CompletionItemKind.Function,
+            cmp.lsp.CompletionItemKind.Method,
+          },
+        }
+      }
+    }
+  })
+)
+
 
 
