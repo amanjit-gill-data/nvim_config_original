@@ -34,13 +34,12 @@ cmp.setup({
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
       select = false
     }),
   }),
   -- sources for autocompletion
   sources = cmp.config.sources({
-    { name = "nvim_lsp" }, -- autocompletions from language servers
+    { name = "nvim_lsp" }, -- autocompletions from language server(s)
     { name = "cmp_nvim_r"}, -- autocompletion for R
     { name = "luasnip" }, -- snippets
     { name = "buffer" }, -- text within current buffer

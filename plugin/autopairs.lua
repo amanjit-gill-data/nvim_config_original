@@ -22,16 +22,6 @@ autopairs.setup{}
 cmp.event:on(
   'confirm_done',
   cmp_autopairs.on_confirm_done({
-    filetypes = {
-      py = {
-        ["("] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-            cmp.lsp.CompletionItemKind.Method,
-          },
-        }
-      }
-    }
   })
 )
 

@@ -3,7 +3,7 @@ if not setup then
   return
 end
 
--- nvim-tree documentation apparently recommends these settings
+-- nvim-tree documentation strongly recommends these settings
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
