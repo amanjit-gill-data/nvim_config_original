@@ -32,7 +32,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+  vim.keymap.set({'n', 'i'}, '<C-k>', vim.lsp.buf.signature_help, bufopts)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wl', function()
@@ -47,9 +47,21 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-lspconfig["pyright"].setup({
+lspconfig["pylsp"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        jedi_completion = {
+          include_params = true
+        },
+        jedi_symbols = {
+          enabled = false
+        }
+      }
+    }
+  }
 })
 
 
