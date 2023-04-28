@@ -16,14 +16,30 @@ if not cmp_setup then
   return
 end
 
+local handlers_setup, handlers = pcall(require, 'nvim-autopairs.completion.handlers')
+if not handlers_setup then
+  return
+end
+
+
 autopairs.setup{}
 
--- link cmp to autopairs
+--[[
 cmp.event:on(
   'confirm_done',
-  cmp_autopairs.on_confirm_done({
-  })
+    cmp_autopairs.on_confirm_done({
+      filetypes = {
+        ["*"] = {
+          [""] = {
+            kind = {
+              cmp.lsp.CompletionItemKind.Function,
+              cmp.lsp.CompletionItemKind.Method
+            },
+            handler = handlers["*"]
+          }
+        }
+      }
+    })
 )
 
-
-
+--]]
