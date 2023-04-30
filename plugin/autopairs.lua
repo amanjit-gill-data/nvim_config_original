@@ -34,14 +34,13 @@ cmp.event:on(
 --]]
 
 
-
 --[[
 cmp.event:on(
   'confirm_done',
     cmp_autopairs.on_confirm_done({
       filetypes = {
         ["*"] = {
-          [""] = {
+          ["("] = {
             kind = {
               cmp.lsp.CompletionItemKind.Function,
               cmp.lsp.CompletionItemKind.Method
@@ -52,5 +51,4 @@ cmp.event:on(
       }
     })
 )
-
 --]]

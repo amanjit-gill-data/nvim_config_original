@@ -2,6 +2,9 @@
 
 local opt = vim.opt
 
+-- turn off nvim intro
+opt.shortmess = "I"
+
 -- line numbering
 
 opt.number = true
