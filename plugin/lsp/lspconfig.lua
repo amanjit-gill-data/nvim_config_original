@@ -10,7 +10,6 @@ if not cmp_nvim_lsp_status then
   return
 end
 
-
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -18,6 +17,14 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+
+-- diagnostic signs in gutter
+local err_types = { "Error", "Warn", "Hint", "Info" }
+
+for key, val in pairs(err_types) do
+  local hl = "DiagnosticSign" .. val
+  vim.fn.sign_define(hl, {text = "•", texthl = hl, numhl = hl})
+end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -58,11 +65,25 @@ lspconfig["pylsp"].setup({
         },
         jedi_symbols = {
           enabled = false
+        },
+        autopep8 = {
+          enabled = false
+        },
+        mccabe = {
+          enabled = false
+        },
+        preload = {
+          enabled = false
+        },
+        yapf = {
+          enabled = false
+        },
+        pycodestyle = {
+          ignore = "['E303', 'W391']"
         }
       }
     }
   }
 })
-
 
 

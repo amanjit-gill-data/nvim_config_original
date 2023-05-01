@@ -12,11 +12,6 @@ end
 
 mason.setup()
 
--- do conda install pyright first
--- chose pyright over pylsp because it autocompletes from installed packages, 
--- like sklearn, out of the box 
--- (pylsp only autocompletes from standard python library out of the box)
-
 mason_lspconfig.setup({
   ensure_installed = {
     "pylsp",

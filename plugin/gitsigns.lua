@@ -4,6 +4,7 @@ if not status then
 end
 
 gitsigns.setup {
+  signcolumn = true,
   signs = {
     delete = {
       text = "|"
