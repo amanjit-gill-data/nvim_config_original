@@ -14,7 +14,7 @@ mason.setup()
 
 mason_lspconfig.setup({
   ensure_installed = {
-    "pylsp",
+    "pyright",
   }
 })
 

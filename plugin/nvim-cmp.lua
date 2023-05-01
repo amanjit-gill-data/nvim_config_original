@@ -15,7 +15,6 @@ require("luasnip/loaders/from_vscode").lazy_load()
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
-vim.cmd("let R_auto_omni = ['r', 'Rmd', 'quarto']")
 vim.cmd("let R_set_omnifunc = ['r', 'Rmd', 'quarto']")
 vim.cmd("let Rout_more_colors = 1")
 

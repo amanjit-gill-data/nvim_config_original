@@ -81,7 +81,6 @@ return require("packer").startup(function(use)
   -- configured to work with autocompleted text too
   use("windwp/nvim-autopairs")
 
-
   -- LANGUAGE SERVER FEATURES --
   -- LSP is built into nvim but the servers themselves are not
   
@@ -96,6 +95,9 @@ return require("packer").startup(function(use)
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
+
+  -- LSP signature help while typing
+  use("ray-x/lsp_signature.nvim")
 
 end)
 

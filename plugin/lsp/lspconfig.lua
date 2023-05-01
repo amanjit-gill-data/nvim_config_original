@@ -59,36 +59,15 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-lspconfig["pylsp"].setup({
+lspconfig["pyright"].setup({
   on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    pylsp = {
-      plugins = {
-        jedi_completion = {
-          include_params = true
-        },
-        jedi_symbols = {
-          enabled = false
-        },
-        autopep8 = {
-          enabled = false
-        },
-        mccabe = {
-          enabled = false
-        },
-        preload = {
-          enabled = false
-        },
-        yapf = {
-          enabled = false
-        },
-        pycodestyle = {
-          ignore = "['E303', 'W391']"
-        }
-      }
-    }
-  }
+  capabilities = capabilities
 })
+
+
+
+
+
+
 
 
