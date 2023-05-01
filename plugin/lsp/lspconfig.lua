@@ -10,8 +10,8 @@ if not cmp_nvim_lsp_status then
   return
 end
 
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
+-- keymappings for diagnostics
+-- see `:help vim.diagnostic.*` 
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -22,18 +22,23 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 local err_types = { "Error", "Warn", "Hint", "Info" }
 
 for key, val in pairs(err_types) do
-  local hl = "DiagnosticSign" .. val
-  vim.fn.sign_define(hl, {text = "•", texthl = hl, numhl = hl})
+  local sign_hl = "DiagnosticSign" .. val
+  vim.fn.sign_define(sign_hl, {text = "•", texthl = sign_hl})
 end
+
+-- disable underlining of linted lines
+vim.diagnostic.config({
+  underline = false
+})
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
+  -- enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
+ 
+  -- keymappings for completions
+  -- see `:help vim.lsp.*`   
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
