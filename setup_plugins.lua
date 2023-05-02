@@ -55,13 +55,10 @@ return require("packer").startup(function(use)
 
   -- autocompletion engine
   -- provides capability for drop-down suggestions
-  -- doesn't include any languages ("sources")
+  -- doesn't include any sources
   use("hrsh7th/nvim-cmp")
 
   -- autocompletion sources
-  -- cmp-buffer: gets cmp to recommend from the buffer
-  -- cmp-path: gets cmp to recommend filepaths
-  -- cmp-nvim-r: for R autocompletion 
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("jalvesaq/cmp-nvim-r")
@@ -71,7 +68,7 @@ return require("packer").startup(function(use)
   -- doesn't include snippet sources
   use("L3MON4D3/LuaSnip") 
 
-  -- snippet "sources"
+  -- snippet sources
   -- cmp_luasnip: allows cmp to access snippets as an autocompletion source
   -- friendly-snippets: snippets for many different languages
   use("saadparwaiz1/cmp_luasnip") 
@@ -95,9 +92,6 @@ return require("packer").startup(function(use)
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
-
-  -- LSP signature help while typing
-  use("ray-x/lsp_signature.nvim")
 
 end)
 
