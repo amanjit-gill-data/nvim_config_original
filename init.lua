@@ -30,6 +30,7 @@ require("plugin.comment")
 require("plugin.nvim-tree")
 require("plugin.lualine")
 require("plugin.gitsigns")
+require("plugin.slime")
 
 -- basic autocompletion inc snippets
 require("plugin.nvim-cmp")
@@ -38,6 +39,5 @@ require("plugin.autopairs")
 -- LSP 
 require("plugin.lsp.mason")
 require("plugin.lsp.lspconfig")
-
 
 

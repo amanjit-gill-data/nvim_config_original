@@ -51,6 +51,9 @@ return require("packer").startup(function(use)
   -- R IDE implementation
   use("jalvesaq/Nvim-R")
 
+  -- iPython integration
+  use("jpalardy/vim-slime")
+
   -- AUTOCOMPLETION -- 
 
   -- autocompletion engine
