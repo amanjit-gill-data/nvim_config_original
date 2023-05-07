@@ -18,8 +18,8 @@ vim.cmd("let R_nvim_wd = 1")
 vim.cmd("let R_objbr_auto_start = 1")
 
 -- python provider
-vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\micromamba\\envs\\dmml\\python.exe'")
-vim.cmd("let g:python_host_prog = 'C:\\Users\\amanj\\micromamba\\envs\\dmml\\python.exe'")
+vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\dmml\\python.exe'")
+vim.cmd("let g:python_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\dmml\\python.exe'")
 
 -- other config files
 require("setup_plugins")
