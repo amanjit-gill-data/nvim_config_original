@@ -39,14 +39,16 @@ function IPythonOpen()
   vim.cmd("vnew | call termopen('ipython')")
 
   -- set job id, so slime knows where to send python code
-  vim.g.slime_default_config = { jobid = vim.b.terminal_job_id }
+  vim.g.slime_default_config = {
+    jobid = vim.b.terminal_job_id
+  }
 
   -- move cursor to bottom; it will stay there, ensuring latest output is 
   -- always visible
   vim.cmd("normal! G")
 
   -- return focus to previous window i.e. python script
-  vim.cmd("wincmd p | vertical resize 85")
+  vim.cmd("wincmd p | vertical resize 90")
 
   vim.keymap.set("n", "nc", "i# %% ") -- start new cell
   vim.keymap.set("n", "<C-c><C-c>", ":lua IPythonSendCell()<CR>") -- send cell
@@ -55,5 +57,8 @@ function IPythonOpen()
 
   vim.keymap.set("n", "<leader>cp", ":lua IPythonExit()<CR>")
 end
+
+
+
 
 

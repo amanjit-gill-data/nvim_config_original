@@ -11,6 +11,9 @@ km.set("n", "x", '"_x')
 -- turn off search highlighting
 km.set("n", "<leader>nh", ":nohl<CR>")
 
+-- go to end of line
+km.set("n", "q", "$")
+
 -- easier keymaps for window splits
 km.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 km.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
