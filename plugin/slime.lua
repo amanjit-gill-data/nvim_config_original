@@ -1,4 +1,3 @@
--- open ipython in built-in terminal
 -- set keymaps to send cells, paragraphs and lines
 -- set keymap to exit ipython and close terminal window
 
@@ -47,9 +46,9 @@ function IPythonOpen()
   vim.cmd("normal! G")
 
   -- return focus to previous window i.e. python script
-  vim.cmd("wincmd p")
+  vim.cmd("wincmd p | vertical resize 85")
 
-  vim.keymap.set("n", "nc", "i# %%<CR><CR>") -- start new cell
+  vim.keymap.set("n", "nc", "i# %% ") -- start new cell
   vim.keymap.set("n", "<C-c><C-c>", ":lua IPythonSendCell()<CR>") -- send cell
   vim.keymap.set("n", "<C-c><C-p>", ":lua IPythonSendParagraph()<CR>") -- send paragraph
   vim.keymap.set("n", "<C-c><C-l>", ":lua IPythonSendLine()<CR>") -- send current line

@@ -1,3 +1,6 @@
+-- brackets after autocompleted functions/methods only work if this config is
+-- NOT called in init.lua
+
 -- safely import autopairs
 local autopairs_setup, autopairs = pcall(require, "nvim-autopairs")
 if not autopairs_setup then
@@ -24,31 +27,7 @@ end
 
 autopairs.setup{}
 
---[[
 cmp.event:on(
   'confirm_done',
-  cmp_autopairs.on_confirm_done({
-
-  })
+  cmp_autopairs.on_confirm_done()
 )
---]]
-
-
---[[
-cmp.event:on(
-  'confirm_done',
-    cmp_autopairs.on_confirm_done({
-      filetypes = {
-        ["*"] = {
-          ["("] = {
-            kind = {
-              cmp.lsp.CompletionItemKind.Function,
-              cmp.lsp.CompletionItemKind.Method
-            },
-            handler = handlers["*"]
-          }
-        }
-      }
-    })
-)
---]]

@@ -34,7 +34,6 @@ require("plugin.slime")
 
 -- basic autocompletion inc snippets
 require("plugin.nvim-cmp")
-require("plugin.autopairs")
 
 -- LSP 
 require("plugin.lsp.mason")

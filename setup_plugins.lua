@@ -76,11 +76,11 @@ return require("packer").startup(function(use)
   -- friendly-snippets: snippets for many different languages
   use("saadparwaiz1/cmp_luasnip") 
   use("rafamadriz/friendly-snippets")
-
+  
   -- autopair brackets 
-  -- configured to work with autocompleted text too
+  -- work with autocompleted functions/methods too
   use("windwp/nvim-autopairs")
-
+  
   -- LANGUAGE SERVER FEATURES --
   -- LSP is built into nvim but the servers themselves are not
   
