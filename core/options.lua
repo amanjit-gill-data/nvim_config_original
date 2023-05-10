@@ -12,18 +12,12 @@ opt.relativenumber = true
 
 -- tabs and indents
 
-opt.tabstop = 2
-opt.shiftwidth = 2
 opt.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 opt.autoindent = true
-opt.cindent = true
-
--- python indentation
-vim.g.python_indent = {}
-vim.g.python_indent.open_parem = 'vim.fn.shiftwidth() * 2'
-vim.g.python_indent.nested_param = 2
-vim.g.python_indent.continue = vim.fn.shiftwidth() * 2
-vim.g.python_indent.closed_paren_align_last_line = true
+opt.smartindent = true
 
 -- line wrap
 opt.wrap = false

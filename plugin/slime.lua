@@ -50,7 +50,6 @@ function IPythonOpen()
   -- return focus to previous window i.e. python script
   vim.cmd("wincmd p | vertical resize 90")
 
-  vim.keymap.set("n", "nc", "i# %% ") -- start new cell
   vim.keymap.set("n", "<C-c><C-c>", ":lua IPythonSendCell()<CR>") -- send cell
   vim.keymap.set("n", "<C-c><C-p>", ":lua IPythonSendParagraph()<CR>") -- send paragraph
   vim.keymap.set("n", "<C-c><C-l>", ":lua IPythonSendLine()<CR>") -- send current line
