@@ -1,5 +1,6 @@
 -- set keymaps to send cells, paragraphs and lines
 -- set keymap to exit ipython and close terminal window
+-- IMPORTANT: must set ipython autoindent to false
 
 vim.g.slime_target = 'neovim'
 vim.g.slime_dont_ask_default = 1
@@ -9,7 +10,8 @@ vim.g.slime_cell_delimiter = '# %%'
 vim.keymap.set("n", "<Leader>op", ":lua IPythonOpen()<CR>")
 
 function IPythonSendCell()
-  vim.cmd("call slime#send_cell() | SlimeSend0 '\r'")
+  vim.cmd("call slime#send_cell()")
+  vim.cmd('SlimeSend0 ""')
 end
 
 -- select and yank current paragraph, then send to ipython
@@ -17,18 +19,18 @@ function IPythonSendParagraph()
   vim.cmd("normal! vipy")
   vim.cmd("let b:selected = getreg('\"0')")
   vim.cmd("SlimeSend0 b:selected")
-  vim.cmd("SlimeSend0 '\r'")
+  vim.cmd('SlimeSend0 ""')
 end
 
 function IPythonSendLine()
   vim.cmd("SlimeSendCurrentLine")
-  vim.cmd("SlimeSend0 '\r'")
+  vim.cmd('SlimeSend0 ""')
 end
 
 -- end python process then close all windows except for python file
 function IPythonExit()
   vim.cmd("SlimeSend0 'exit()'")
-  vim.cmd("SlimeSend0 '\r'")
+  vim.cmd('SlimeSend0 ""')
   vim.cmd("only")
 end
 
