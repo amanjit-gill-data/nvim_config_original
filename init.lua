@@ -8,7 +8,7 @@ package.path = package.path .. config_path
 -- only works if nvim shell is cmd.exe
 vim.cmd("let $WINDOWID = win_getid()")
 vim.cmd("let &shell = 'cmd.exe'")
-vim.cmd("let R_path = 'C:\\Program Files\\R\\R-4.2.3\\bin\\x64'")
+vim.cmd("let R_path = 'C:\\Program Files\\R\\R-4.3.0\\bin\\x64'")
 vim.cmd("let $PATH = 'C:\\rtools42\\usr\\bin;' . $PATH")
 
 -- when R starts, set working directory to the one containing the open file

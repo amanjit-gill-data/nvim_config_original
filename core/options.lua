@@ -27,6 +27,12 @@ opt.smartcase = true
 -- cursor line
 opt.cursorline = true
 
+-- keep cursor above bottom
+vim.api.nvim_create_autocmd({"BufEnter", "WinEnter", "WinNew", "VimResized"}, {
+  pattern = {"*.*"},
+  command = "set scrolloff=15"
+})
+
 -- cursor shape and blinking
 opt.guicursor = "i:blinkwait100-blinkon500-blinkoff500,i:ver20"
 
