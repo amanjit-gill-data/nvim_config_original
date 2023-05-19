@@ -12,7 +12,7 @@ km.set("n", "x", '"_x')
 km.set("n", "<leader>nh", ":nohl<CR>")
 
 -- go to end of line
-km.set("n", "q", "$")
+km.set("n", "`", "$")
 
 -- easier keymaps for window splits
 km.set("n", "<leader>sv", "<C-w>v") -- split window vertically
