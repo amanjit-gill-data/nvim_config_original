@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  semshi = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\semshi",
+    url = "https://github.com/numirias/semshi"
+  },
   ["vim-ReplaceWithRegister"] = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-ReplaceWithRegister",

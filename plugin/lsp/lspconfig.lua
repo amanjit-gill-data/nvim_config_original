@@ -57,7 +57,15 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 
 lspconfig["pyright"].setup({
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  settings = {
+    python = {
+      analysis = {
+        typeshedPaths = "G:/My Drive/Data Science/Resources/Python/typeshed",
+        reportMissingTypeStubs = true
+      }
+    }
+  }
 })
 
 

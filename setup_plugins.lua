@@ -29,6 +29,9 @@ return require("packer").startup(function(use)
   -- nightfly colour scheme
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
+  -- extra syntax highlighting for python 
+  use("numirias/semshi")
+
   -- maximise and un-maximise current window (or split window)
   use("szw/vim-maximizer")
  
