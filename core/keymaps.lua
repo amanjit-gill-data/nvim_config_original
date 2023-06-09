@@ -32,19 +32,22 @@ km.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 km.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- MOVE BETWEEN START/END OF LINE 
--- 1 keypress moves to start  
--- 1 to 2 keypresses moves to end 
+-- 1 keypress moves to end
+-- 1 to 2 keypresses moves to start
 
 function LineStartEnd()
   r, c = unpack(vim.api.nvim_win_get_cursor(0))
+  line_length = vim.fn.col('$') - 1
 
-  if c ~= 0 then
-    vim.api.nvim_win_set_cursor(0, {r, 0})
-  else 
-    line_length = vim.fn.col('$') - 1
+  if c+1 ~= line_length then
     vim.api.nvim_win_set_cursor(0, {r, line_length})
+  else 
+    vim.api.nvim_win_set_cursor(0, {r, 0})
   end 
 end
 
 km.set("n", "0", ":lua LineStartEnd()<CR>") 
+
+
+
 
