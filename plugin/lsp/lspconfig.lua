@@ -31,14 +31,9 @@ vim.diagnostic.config({
   underline = false
 })
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local add_keymaps = function(bufnr)
   -- enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
- 
-  -- keymappings for completions
-  -- see `:help vim.lsp.*`   
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.hover, bufopts)
@@ -56,22 +51,82 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 lspconfig["pyright"].setup({
-  on_attach = on_attach,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    add_keymaps(bufnr)
+  end,
   settings = {
     python = {
+      -- setting pythonPath didn't work 
+      venvPath = "C:/Users/amanj/miniconda3/envs/dmml",
       analysis = {
-        typeshedPaths = "G:/My Drive/Data Science/Resources/Python/typeshed",
-        reportMissingTypeStubs = true
+        -- stubPath must point to folders named for pkgs, containing .pyi stubs
+        stubPath = "G:/My Drive/Data Science/Resources/Python/python-type-stubs/stubs",
+        -- library code causes delay in completions appearing, so turn it off
+        useLibraryCodeForTypes = false,
       }
     }
   }
 })
 
+lspconfig["lua_ls"].setup({
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    add_keymaps(bufnr)
+  end
+})
 
+-- extremely fast linting; no completions
+-- lspconfig["ruff_lsp"].setup({
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     client.server_capabilities.completionProvider = false
+--     client.server_capabilities.definitionProvider = false
+--     client.server_capabilities.hoverProvider = false
+--     add_keymaps(bufnr)
+--   end,
+-- })
 
+-- there's no single switch to turn off diagnostics in pyright
+        -- diagnosticSeverityOverrides = false,
+        -- analyzeUnannotatedFunctions = false,
+        -- reportGeneralTypeIssues = false,
+        -- reportMissingImports = false,
+        -- reportMissingModuleSource = false,
+        -- reportWildcardImportFromLibrary = false,
+        -- reportOptionalSubscript = false,
+        -- reportOptionalMemberAccess = false,
+        -- reportOptionalCall = false,
+        -- reportOptionalIterable = false,
+        -- reportOptionalContextManager = false,
+        -- reportOptionalOperand = false,
+        -- reportTypedDictNotRequiredAccess = false,
+        -- reportPrivateImportUsage = false,
+        -- reportInvalidStringEscapeSequence = false,
+        -- reportInvalidTypeVarUse = false,
+        -- reportAssertAlwaysTrue = false,
+        -- reportSelfClsParameterName = false,
+        -- reportUndefinedVariable = false,
+        -- reportUnboundVariable = false,
+        -- reportUnsupportedDunderAll = false,
+        -- reportUnusedCoroutine = false,
 
-
-
+-- lspconfig["jedi_language_server"].setup({
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     client.server_capabilities.diagnosticProvider = false
+--     add_keymaps(bufnr)
+--   end,
+--   settings = {
+--     jedi = {
+--       jediSettings = {
+--         autoImportModules = '["numpy", "pandas", "sklearn", "keras"]'
+--       },
+--       diagnostics = {
+--         enable = false,
+--       },
+--     }
+--   }
+-- })
 
 

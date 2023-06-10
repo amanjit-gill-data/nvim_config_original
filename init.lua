@@ -39,4 +39,12 @@ require("plugin.nvim-cmp")
 require("plugin.lsp.mason")
 require("plugin.lsp.lspconfig")
 
+vim.cmd([[
+  augroup define_highlight_patterns
+    autocmd!
+    autocmd BufWinEnter *.py 
+    \ syn match pythonClassAttribute "self\.\h*"
+  augroup end
+]])
+
 

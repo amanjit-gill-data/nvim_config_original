@@ -30,7 +30,8 @@ return require("packer").startup(function(use)
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
   -- extra syntax highlighting for python 
-  use("numirias/semshi")
+  use("vim-python/python-syntax")
+  use("itchyny/vim-cursorword")
 
   -- maximise and un-maximise current window (or split window)
   use("szw/vim-maximizer")
@@ -98,6 +99,7 @@ return require("packer").startup(function(use)
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
+
 
 end)
 

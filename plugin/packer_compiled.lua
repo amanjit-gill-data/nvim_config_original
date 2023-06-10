@@ -179,15 +179,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  semshi = {
+  ["python-syntax"] = {
     loaded = true,
-    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\semshi",
-    url = "https://github.com/numirias/semshi"
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\python-syntax",
+    url = "https://github.com/vim-python/python-syntax"
   },
   ["vim-ReplaceWithRegister"] = {
     loaded = true,
     path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
+  },
+  ["vim-cursorword"] = {
+    loaded = true,
+    path = "C:\\Users\\amanj\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-cursorword",
+    url = "https://github.com/itchyny/vim-cursorword"
   },
   ["vim-maximizer"] = {
     loaded = true,
