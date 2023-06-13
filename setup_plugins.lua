@@ -29,7 +29,7 @@ return require("packer").startup(function(use)
   -- nightfly colour scheme
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
-  -- extra syntax highlighting for python 
+  -- extra syntax highlighting
   use("vim-python/python-syntax")
   use("itchyny/vim-cursorword")
 
