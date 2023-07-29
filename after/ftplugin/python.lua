@@ -10,16 +10,6 @@ opt.autoindent = true
 -- demark new cell for iPython
 vim.keymap.set("n", "nc", "i# %% ")
 
--- CURSORWORD CUSTOMISATION -- 
-
--- give me more time to finish typing a word; milliseconds
-vim.cmd("let g:cursorword_delay=800")
-
--- stop cursorword plugin from underlining words 
--- set custom highlight for cursorword
-vim.cmd("hi clear CursorWord")
-vim.cmd("hi CursorWord guifg=#ffffff guibg=#005f5f")
-
 -- turn on highlighting by python-syntax plugin
 vim.cmd("let g:python_highlight_all=1")
 
@@ -50,3 +40,5 @@ vim.cmd("hi link Operator Statement")
 vim.cmd("hi link pythonImport Statement")
 
 vim.cmd("hi pythonSpaceError guibg=clear")
+
+

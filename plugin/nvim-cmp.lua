@@ -11,7 +11,11 @@ if not luasnip_status then
 end
 
 -- load vscode-like snippets from plugins (such as friendly-snippets)
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip/loaders/from_vscode").lazy_load({
+  dependencies = {
+    "rafamadriz/friendly-snippets"
+  }
+})
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -41,7 +45,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" }, -- autocompletions from language server(s)
     { name = "cmp_nvim_r"}, -- autocompletion for R
-    { name = "luasnip" }, -- snippets
+    -- { name = "luasnip" }, -- snippets
     { name = "buffer" }, -- text within current buffer
     { name = "path" , option = { trailing_slash = true }}, -- file system paths
   })

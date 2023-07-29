@@ -24,7 +24,7 @@ return require("packer").startup(function(use)
   use("tpope/vim-surround")
 
   -- overwrite with yanked text (gr + motion)
-  use("inkarkat/vim-ReplaceWithRegister") 
+  use("inkarkat/vim-ReplaceWithRegister")
 
   -- nightfly colour scheme
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
@@ -35,7 +35,7 @@ return require("packer").startup(function(use)
 
   -- maximise and un-maximise current window (or split window)
   use("szw/vim-maximizer")
- 
+
   -- comment with 'gc'
   use("numToStr/Comment.nvim")
 
@@ -73,33 +73,35 @@ return require("packer").startup(function(use)
   -- snippet engine
   -- provides capability for loading and creating snippets
   -- doesn't include snippet sources
-  use("L3MON4D3/LuaSnip") 
+  -- for some reason my python completions don't work without this
+  use("L3MON4D3/LuaSnip")
 
+  -- DISABLED
   -- snippet sources
   -- cmp_luasnip: allows cmp to access snippets as an autocompletion source
   -- friendly-snippets: snippets for many different languages
-  use("saadparwaiz1/cmp_luasnip") 
-  use("rafamadriz/friendly-snippets")
-  
+  -- use("saadparwaiz1/cmp_luasnip")
+  -- use("rafamadriz/friendly-snippets")
+
   -- autopair brackets 
   -- work with autocompleted functions/methods too
   use("windwp/nvim-autopairs")
-  
+
   -- LANGUAGE SERVER FEATURES --
-  -- LSP is built into nvim but the servers themselves are not
-  
+  -- LSP client is built into nvim but the servers themselves are not
+
   -- install and manage lsp servers
+  -- can also install lsp servers into env via conda etc 
   use("williamboman/mason.nvim")
 
   -- makes it easier to use mason with lspconfig; bridges the two
   use("williamboman/mason-lspconfig.nvim")
-  
+
   -- to configure lsp servers
   use("neovim/nvim-lspconfig")
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
-
 
 end)
 

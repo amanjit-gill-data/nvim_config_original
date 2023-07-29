@@ -29,5 +29,25 @@ autopairs.setup{}
 
 cmp.event:on(
   'confirm_done',
-  cmp_autopairs.on_confirm_done()
+  cmp_autopairs.on_confirm_done({
+    filetypes = {
+      ["*"] = {
+        ["("] = {
+          kind = {
+            cmp.lsp.CompletionItemKind.Function,
+            cmp.lsp.CompletionItemKind.Method,
+          },
+          handler = handlers["*"]
+        }
+      },
+      ["tex"] = {
+        ["{"] = {
+          kind = {
+            cmp.lsp.CompletionItemKind.Function,
+          },
+          handler = handlers["*"]
+        },
+      },
+    }
+  })
 )

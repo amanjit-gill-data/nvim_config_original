@@ -5,6 +5,14 @@ vim.g.mapleader = "\\"
 
 local km = vim.keymap
 
+-- move directly up/down even when word wrap is on 
+km.set("n", "j", "gj")
+km.set("n", "k", "gk")
+km.set("n", "<Down>", "gj")
+km.set("n", "<Up>", "gk")
+km.set("n", "gj", "j")
+km.set("n", "gj", "k")
+
 -- delete single character without saving it to clipboard
 km.set("n", "x", '"_x')
 
