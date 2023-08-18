@@ -40,14 +40,6 @@ cmp.event:on(
           handler = handlers["*"]
         }
       },
-      ["tex"] = {
-        ["{"] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-          },
-          handler = handlers["*"]
-        },
-      },
     }
   })
 )

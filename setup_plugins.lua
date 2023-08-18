@@ -29,8 +29,7 @@ return require("packer").startup(function(use)
   -- nightfly colour scheme
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
-  -- extra syntax highlighting
-  use("vim-python/python-syntax")
+  -- highlight word currently under cursor
   use("itchyny/vim-cursorword")
 
   -- maximise and un-maximise current window (or split window)
@@ -102,6 +101,12 @@ return require("packer").startup(function(use)
 
   -- to connect lsp with autocompletion
   use("hrsh7th/cmp-nvim-lsp")
+
+  -- FOR TREESITTER --
+
+  -- easily install parsers 
+  use("nvim-treesitter/nvim-treesitter")
+
 
 end)
 
