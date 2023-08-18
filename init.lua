@@ -1,7 +1,7 @@
 -- to find lua config files 
 -- otherwise it can only find them if nvim is started in config directory
 local config_path = os.getenv("XDG_CONFIG_HOME") .. "\\nvim\\?.lua;"
-package.path = package.path .. config_path 
+package.path = package.path .. config_path
 
 -- python provider
 vim.cmd("let g:python3_host_prog = 'C:\\Users\\amanj\\miniconda3\\envs\\dmml\\python.exe'")
