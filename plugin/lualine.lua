@@ -26,14 +26,22 @@ lualine_nightfly.command = {
   a = {
     gui = "bold",
     bg = new_colours.yellow,
-    fg = new_colours.black 
+    fg = new_colours.black
   }
 }
 
--- lualine.setup() is enough get the statusline working without options
 lualine.setup({
   options = {
     theme = lualine_nightfly
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'filename'},
+    lualine_c = {'diagnostics'},
+
+    lualine_x = {'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'},
   }
 })
 
