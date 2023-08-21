@@ -18,6 +18,3 @@ I initially followed @josean-dev's [YouTube tutorial](https://www.youtube.com/wa
 
 - If you're finding LSP completions and diagnostics too slow (or too incomplete) for Python's machine learning libraries, you might want to check out lspconfig.lua. I'm using Pyright for completions (using additional type stubs rather than library code) and Ruff for diagnostics. This works beautifully fast for small jobs, but completions slow down dramatically when very complex, untyped, libraries are traversed to resolve types. 
 
-
-
-
